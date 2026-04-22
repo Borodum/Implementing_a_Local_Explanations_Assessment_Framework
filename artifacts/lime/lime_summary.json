@@ -1,0 +1,988 @@
+{
+  "seed": 42,
+  "n_examples": 10,
+  "num_features": 10,
+  "num_samples": 5000,
+  "results": [
+    {
+      "test_index": 7,
+      "true_y": 0,
+      "pred_y": 0,
+      "proba": [
+        1.0,
+        7.524972867045676e-10
+      ],
+      "explained_label": 0,
+      "num_features": 10,
+      "num_samples": 5000,
+      "weights": [
+        {
+          "feature": "area error > 0.09",
+          "weight": 0.2508046144128454
+        },
+        {
+          "feature": "radius error > 0.25",
+          "weight": 0.2352584714986658
+        },
+        {
+          "feature": "worst texture > 0.60",
+          "weight": 0.2230668767938443
+        },
+        {
+          "feature": "worst area > 0.20",
+          "weight": 0.20542618001159463
+        },
+        {
+          "feature": "perimeter error > 0.21",
+          "weight": 0.19267182048276746
+        },
+        {
+          "feature": "worst concave points > 0.74",
+          "weight": 0.18560351236222122
+        },
+        {
+          "feature": "worst radius > 0.37",
+          "weight": 0.1727151808453684
+        },
+        {
+          "feature": "compactness error > 0.38",
+          "weight": -0.16508650731202398
+        },
+        {
+          "feature": "mean area > 0.28",
+          "weight": 0.16024983259485825
+        },
+        {
+          "feature": "mean concave points > 0.71",
+          "weight": 0.13761292478604878
+        }
+      ],
+      "local_exp": [
+        {
+          "feature_idx": 13,
+          "weight": 0.2508046144128454
+        },
+        {
+          "feature_idx": 10,
+          "weight": 0.2352584714986658
+        },
+        {
+          "feature_idx": 21,
+          "weight": 0.2230668767938443
+        },
+        {
+          "feature_idx": 23,
+          "weight": 0.20542618001159463
+        },
+        {
+          "feature_idx": 12,
+          "weight": 0.19267182048276746
+        },
+        {
+          "feature_idx": 27,
+          "weight": 0.18560351236222122
+        },
+        {
+          "feature_idx": 20,
+          "weight": 0.1727151808453684
+        },
+        {
+          "feature_idx": 15,
+          "weight": -0.16508650731202398
+        },
+        {
+          "feature_idx": 3,
+          "weight": 0.16024983259485825
+        },
+        {
+          "feature_idx": 7,
+          "weight": 0.13761292478604878
+        }
+      ],
+      "intercept": 0.09517132535898498,
+      "html_file": "lime_test_007.html"
+    },
+    {
+      "test_index": 15,
+      "true_y": 1,
+      "pred_y": 1,
+      "proba": [
+        0.020498812198638916,
+        0.9795011878013611
+      ],
+      "explained_label": 1,
+      "num_features": 10,
+      "num_samples": 5000,
+      "weights": [
+        {
+          "feature": "fractal dimension error <= -0.56",
+          "weight": -0.10572033431667156
+        },
+        {
+          "feature": "mean fractal dimension <= -0.63",
+          "weight": -0.09447970647891087
+        },
+        {
+          "feature": "worst symmetry <= -0.61",
+          "weight": 0.0879669966704044
+        },
+        {
+          "feature": "-0.50 < area error <= -0.36",
+          "weight": 0.08516502653773439
+        },
+        {
+          "feature": "mean symmetry <= -0.68",
+          "weight": 0.07884362793709844
+        },
+        {
+          "feature": "-0.62 < perimeter error <= -0.28",
+          "weight": 0.0668056391279825
+        },
+        {
+          "feature": "-0.61 < radius error <= -0.30",
+          "weight": 0.06545272827739158
+        },
+        {
+          "feature": "-0.67 < compactness error <= -0.26",
+          "weight": -0.055867053178087975
+        },
+        {
+          "feature": "-0.73 < mean smoothness <= 0.01",
+          "weight": 0.05060432755189919
+        },
+        {
+          "feature": "-0.80 < worst concavity <= -0.18",
+          "weight": 0.042009407126628144
+        }
+      ],
+      "local_exp": [
+        {
+          "feature_idx": 19,
+          "weight": -0.10572033431667156
+        },
+        {
+          "feature_idx": 9,
+          "weight": -0.09447970647891087
+        },
+        {
+          "feature_idx": 28,
+          "weight": 0.0879669966704044
+        },
+        {
+          "feature_idx": 13,
+          "weight": 0.08516502653773439
+        },
+        {
+          "feature_idx": 8,
+          "weight": 0.07884362793709844
+        },
+        {
+          "feature_idx": 12,
+          "weight": 0.0668056391279825
+        },
+        {
+          "feature_idx": 10,
+          "weight": 0.06545272827739158
+        },
+        {
+          "feature_idx": 15,
+          "weight": -0.055867053178087975
+        },
+        {
+          "feature_idx": 4,
+          "weight": 0.05060432755189919
+        },
+        {
+          "feature_idx": 26,
+          "weight": 0.042009407126628144
+        }
+      ],
+      "intercept": 0.47127339380033934,
+      "html_file": "lime_test_015.html"
+    },
+    {
+      "test_index": 49,
+      "true_y": 0,
+      "pred_y": 0,
+      "proba": [
+        0.9999998211860657,
+        1.9361247893812106e-07
+      ],
+      "explained_label": 0,
+      "num_features": 10,
+      "num_samples": 5000,
+      "weights": [
+        {
+          "feature": "area error > 0.09",
+          "weight": 0.26150690563068024
+        },
+        {
+          "feature": "worst area > 0.20",
+          "weight": 0.21859841928481222
+        },
+        {
+          "feature": "worst concave points > 0.74",
+          "weight": 0.1875119171268038
+        },
+        {
+          "feature": "worst radius > 0.37",
+          "weight": 0.18022569610716122
+        },
+        {
+          "feature": "worst smoothness > 0.59",
+          "weight": 0.16557671456772363
+        },
+        {
+          "feature": "worst perimeter > 0.46",
+          "weight": 0.1383581119383857
+        },
+        {
+          "feature": "mean concave points > 0.71",
+          "weight": 0.13733491946299387
+        },
+        {
+          "feature": "mean area > 0.28",
+          "weight": 0.13219555486510898
+        },
+        {
+          "feature": "mean radius > 0.41",
+          "weight": 0.09177385549678813
+        },
+        {
+          "feature": "mean perimeter > 0.45",
+          "weight": 0.08907640587486523
+        }
+      ],
+      "local_exp": [
+        {
+          "feature_idx": 13,
+          "weight": 0.26150690563068024
+        },
+        {
+          "feature_idx": 23,
+          "weight": 0.21859841928481222
+        },
+        {
+          "feature_idx": 27,
+          "weight": 0.1875119171268038
+        },
+        {
+          "feature_idx": 20,
+          "weight": 0.18022569610716122
+        },
+        {
+          "feature_idx": 24,
+          "weight": 0.16557671456772363
+        },
+        {
+          "feature_idx": 22,
+          "weight": 0.1383581119383857
+        },
+        {
+          "feature_idx": 7,
+          "weight": 0.13733491946299387
+        },
+        {
+          "feature_idx": 3,
+          "weight": 0.13219555486510898
+        },
+        {
+          "feature_idx": 0,
+          "weight": 0.09177385549678813
+        },
+        {
+          "feature_idx": 2,
+          "weight": 0.08907640587486523
+        }
+      ],
+      "intercept": 0.08587091590222357,
+      "html_file": "lime_test_049.html"
+    },
+    {
+      "test_index": 53,
+      "true_y": 0,
+      "pred_y": 1,
+      "proba": [
+        0.0073187947273254395,
+        0.9926812052726746
+      ],
+      "explained_label": 1,
+      "num_features": 10,
+      "num_samples": 5000,
+      "weights": [
+        {
+          "feature": "mean texture <= -0.73",
+          "weight": 0.12188565193073946
+        },
+        {
+          "feature": "-0.50 < area error <= -0.36",
+          "weight": 0.08695247311527182
+        },
+        {
+          "feature": "symmetry error <= -0.67",
+          "weight": -0.07801617205960411
+        },
+        {
+          "feature": "-0.73 < worst texture <= -0.06",
+          "weight": 0.07306344956110278
+        },
+        {
+          "feature": "-0.61 < radius error <= -0.30",
+          "weight": 0.06331464457514965
+        },
+        {
+          "feature": "-0.56 < fractal dimension error <= -0.23",
+          "weight": -0.05989552840782596
+        },
+        {
+          "feature": "-0.62 < perimeter error <= -0.28",
+          "weight": 0.052023508887774086
+        },
+        {
+          "feature": "-0.67 < compactness error <= -0.26",
+          "weight": -0.049883424730381376
+        },
+        {
+          "feature": "smoothness error <= -0.62",
+          "weight": -0.043709141386193695
+        },
+        {
+          "feature": "worst compactness > 0.49",
+          "weight": -0.03819891134023657
+        }
+      ],
+      "local_exp": [
+        {
+          "feature_idx": 1,
+          "weight": 0.12188565193073946
+        },
+        {
+          "feature_idx": 13,
+          "weight": 0.08695247311527182
+        },
+        {
+          "feature_idx": 18,
+          "weight": -0.07801617205960411
+        },
+        {
+          "feature_idx": 21,
+          "weight": 0.07306344956110278
+        },
+        {
+          "feature_idx": 10,
+          "weight": 0.06331464457514965
+        },
+        {
+          "feature_idx": 19,
+          "weight": -0.05989552840782596
+        },
+        {
+          "feature_idx": 12,
+          "weight": 0.052023508887774086
+        },
+        {
+          "feature_idx": 15,
+          "weight": -0.049883424730381376
+        },
+        {
+          "feature_idx": 14,
+          "weight": -0.043709141386193695
+        },
+        {
+          "feature_idx": 25,
+          "weight": -0.03819891134023657
+        }
+      ],
+      "intercept": 0.4891215546423745,
+      "html_file": "lime_test_053.html"
+    },
+    {
+      "test_index": 55,
+      "true_y": 1,
+      "pred_y": 1,
+      "proba": [
+        2.7418136596679688e-06,
+        0.9999972581863403
+      ],
+      "explained_label": 1,
+      "num_features": 10,
+      "num_samples": 5000,
+      "weights": [
+        {
+          "feature": "fractal dimension error > 0.24",
+          "weight": 0.1390627868215964
+        },
+        {
+          "feature": "radius error <= -0.61",
+          "weight": 0.13066036604608183
+        },
+        {
+          "feature": "mean fractal dimension > 0.47",
+          "weight": 0.11938992376368242
+        },
+        {
+          "feature": "area error <= -0.50",
+          "weight": 0.10436890086754039
+        },
+        {
+          "feature": "worst radius <= -0.65",
+          "weight": 0.08501221892464639
+        },
+        {
+          "feature": "-0.62 < perimeter error <= -0.28",
+          "weight": 0.07870585141766927
+        },
+        {
+          "feature": "-0.78 < worst concave points <= -0.28",
+          "weight": 0.07299972257762394
+        },
+        {
+          "feature": "-0.63 < worst area <= -0.33",
+          "weight": 0.07255742065774852
+        },
+        {
+          "feature": "-0.75 < mean concave points <= -0.42",
+          "weight": 0.056582872595240696
+        },
+        {
+          "feature": "-0.04 < worst smoothness <= 0.59",
+          "weight": -0.052685151385241935
+        }
+      ],
+      "local_exp": [
+        {
+          "feature_idx": 19,
+          "weight": 0.1390627868215964
+        },
+        {
+          "feature_idx": 10,
+          "weight": 0.13066036604608183
+        },
+        {
+          "feature_idx": 9,
+          "weight": 0.11938992376368242
+        },
+        {
+          "feature_idx": 13,
+          "weight": 0.10436890086754039
+        },
+        {
+          "feature_idx": 20,
+          "weight": 0.08501221892464639
+        },
+        {
+          "feature_idx": 12,
+          "weight": 0.07870585141766927
+        },
+        {
+          "feature_idx": 27,
+          "weight": 0.07299972257762394
+        },
+        {
+          "feature_idx": 23,
+          "weight": 0.07255742065774852
+        },
+        {
+          "feature_idx": 7,
+          "weight": 0.056582872595240696
+        },
+        {
+          "feature_idx": 24,
+          "weight": -0.052685151385241935
+        }
+      ],
+      "intercept": 0.32732024770791474,
+      "html_file": "lime_test_055.html"
+    },
+    {
+      "test_index": 76,
+      "true_y": 0,
+      "pred_y": 0,
+      "proba": [
+        0.9979993104934692,
+        0.002000707434490323
+      ],
+      "explained_label": 0,
+      "num_features": 10,
+      "num_samples": 5000,
+      "weights": [
+        {
+          "feature": "perimeter error > 0.21",
+          "weight": 0.1888276329649439
+        },
+        {
+          "feature": "worst concave points > 0.74",
+          "weight": 0.18016094338738045
+        },
+        {
+          "feature": "compactness error > 0.38",
+          "weight": -0.16156068643350374
+        },
+        {
+          "feature": "mean concave points > 0.71",
+          "weight": 0.14375529485428157
+        },
+        {
+          "feature": "mean texture > 0.55",
+          "weight": 0.1425098956881405
+        },
+        {
+          "feature": "mean fractal dimension > 0.47",
+          "weight": -0.12499294051008723
+        },
+        {
+          "feature": "worst concavity > 0.51",
+          "weight": 0.11881821217015542
+        },
+        {
+          "feature": "mean concavity > 0.59",
+          "weight": 0.11842859301403949
+        },
+        {
+          "feature": "symmetry error > 0.38",
+          "weight": -0.08341778526267236
+        },
+        {
+          "feature": "-0.61 < radius error <= -0.30",
+          "weight": -0.05442654626508406
+        }
+      ],
+      "local_exp": [
+        {
+          "feature_idx": 12,
+          "weight": 0.1888276329649439
+        },
+        {
+          "feature_idx": 27,
+          "weight": 0.18016094338738045
+        },
+        {
+          "feature_idx": 15,
+          "weight": -0.16156068643350374
+        },
+        {
+          "feature_idx": 7,
+          "weight": 0.14375529485428157
+        },
+        {
+          "feature_idx": 1,
+          "weight": 0.1425098956881405
+        },
+        {
+          "feature_idx": 9,
+          "weight": -0.12499294051008723
+        },
+        {
+          "feature_idx": 26,
+          "weight": 0.11881821217015542
+        },
+        {
+          "feature_idx": 6,
+          "weight": 0.11842859301403949
+        },
+        {
+          "feature_idx": 18,
+          "weight": -0.08341778526267236
+        },
+        {
+          "feature_idx": 10,
+          "weight": -0.05442654626508406
+        }
+      ],
+      "intercept": 0.3639610809957134,
+      "html_file": "lime_test_076.html"
+    },
+    {
+      "test_index": 79,
+      "true_y": 1,
+      "pred_y": 1,
+      "proba": [
+        0.0003072023391723633,
+        0.9996927976608276
+      ],
+      "explained_label": 1,
+      "num_features": 10,
+      "num_samples": 5000,
+      "weights": [
+        {
+          "feature": "worst texture <= -0.73",
+          "weight": 0.18376692916781906
+        },
+        {
+          "feature": "mean fractal dimension <= -0.63",
+          "weight": -0.1357051878218667
+        },
+        {
+          "feature": "mean symmetry <= -0.68",
+          "weight": 0.09838798436539885
+        },
+        {
+          "feature": "fractal dimension error <= -0.56",
+          "weight": -0.09801846792493965
+        },
+        {
+          "feature": "-0.61 < radius error <= -0.30",
+          "weight": 0.0795846124347325
+        },
+        {
+          "feature": "-0.74 < worst smoothness <= -0.04",
+          "weight": 0.07401908139986048
+        },
+        {
+          "feature": "-0.78 < worst concave points <= -0.28",
+          "weight": 0.0703037887519143
+        },
+        {
+          "feature": "-0.62 < perimeter error <= -0.28",
+          "weight": 0.05071700747820602
+        },
+        {
+          "feature": "-0.78 < mean concavity <= -0.37",
+          "weight": 0.04181888961431387
+        },
+        {
+          "feature": "-0.75 < mean concave points <= -0.42",
+          "weight": 0.037282172955620155
+        }
+      ],
+      "local_exp": [
+        {
+          "feature_idx": 21,
+          "weight": 0.18376692916781906
+        },
+        {
+          "feature_idx": 9,
+          "weight": -0.1357051878218667
+        },
+        {
+          "feature_idx": 8,
+          "weight": 0.09838798436539885
+        },
+        {
+          "feature_idx": 19,
+          "weight": -0.09801846792493965
+        },
+        {
+          "feature_idx": 10,
+          "weight": 0.0795846124347325
+        },
+        {
+          "feature_idx": 24,
+          "weight": 0.07401908139986048
+        },
+        {
+          "feature_idx": 27,
+          "weight": 0.0703037887519143
+        },
+        {
+          "feature_idx": 12,
+          "weight": 0.05071700747820602
+        },
+        {
+          "feature_idx": 6,
+          "weight": 0.04181888961431387
+        },
+        {
+          "feature_idx": 7,
+          "weight": 0.037282172955620155
+        }
+      ],
+      "intercept": 0.42620278689576263,
+      "html_file": "lime_test_079.html"
+    },
+    {
+      "test_index": 81,
+      "true_y": 1,
+      "pred_y": 1,
+      "proba": [
+        2.09808349609375e-05,
+        0.9999790191650391
+      ],
+      "explained_label": 1,
+      "num_features": 10,
+      "num_samples": 5000,
+      "weights": [
+        {
+          "feature": "worst radius <= -0.65",
+          "weight": 0.15462059699608877
+        },
+        {
+          "feature": "worst area <= -0.63",
+          "weight": 0.13051512723921693
+        },
+        {
+          "feature": "worst concave points <= -0.78",
+          "weight": 0.1207301044344934
+        },
+        {
+          "feature": "mean symmetry > 0.51",
+          "weight": -0.09893178267912951
+        },
+        {
+          "feature": "mean radius <= -0.69",
+          "weight": 0.09763153472612714
+        },
+        {
+          "feature": "worst perimeter <= -0.67",
+          "weight": 0.09740861281265104
+        },
+        {
+          "feature": "worst concavity <= -0.80",
+          "weight": 0.09349999806578091
+        },
+        {
+          "feature": "symmetry error > 0.38",
+          "weight": 0.08870801001682502
+        },
+        {
+          "feature": "mean area <= -0.66",
+          "weight": 0.08182597483180344
+        },
+        {
+          "feature": "mean concave points <= -0.75",
+          "weight": 0.08016729282947883
+        }
+      ],
+      "local_exp": [
+        {
+          "feature_idx": 20,
+          "weight": 0.15462059699608877
+        },
+        {
+          "feature_idx": 23,
+          "weight": 0.13051512723921693
+        },
+        {
+          "feature_idx": 27,
+          "weight": 0.1207301044344934
+        },
+        {
+          "feature_idx": 8,
+          "weight": -0.09893178267912951
+        },
+        {
+          "feature_idx": 0,
+          "weight": 0.09763153472612714
+        },
+        {
+          "feature_idx": 22,
+          "weight": 0.09740861281265104
+        },
+        {
+          "feature_idx": 26,
+          "weight": 0.09349999806578091
+        },
+        {
+          "feature_idx": 18,
+          "weight": 0.08870801001682502
+        },
+        {
+          "feature_idx": 3,
+          "weight": 0.08182597483180344
+        },
+        {
+          "feature_idx": 7,
+          "weight": 0.08016729282947883
+        }
+      ],
+      "intercept": 0.30154857011055713,
+      "html_file": "lime_test_081.html"
+    },
+    {
+      "test_index": 93,
+      "true_y": 0,
+      "pred_y": 0,
+      "proba": [
+        0.9999989867210388,
+        1.0117613555848948e-06
+      ],
+      "explained_label": 0,
+      "num_features": 10,
+      "num_samples": 5000,
+      "weights": [
+        {
+          "feature": "area error > 0.09",
+          "weight": 0.26088299467712384
+        },
+        {
+          "feature": "radius error > 0.25",
+          "weight": 0.23381148019855658
+        },
+        {
+          "feature": "worst area > 0.20",
+          "weight": 0.2064631021062706
+        },
+        {
+          "feature": "worst radius > 0.37",
+          "weight": 0.19296040908828718
+        },
+        {
+          "feature": "perimeter error > 0.21",
+          "weight": 0.165232660020319
+        },
+        {
+          "feature": "worst perimeter > 0.46",
+          "weight": 0.16319192270790225
+        },
+        {
+          "feature": "worst smoothness <= -0.74",
+          "weight": -0.1601445166217778
+        },
+        {
+          "feature": "mean area > 0.28",
+          "weight": 0.1296291161938827
+        },
+        {
+          "feature": "mean radius > 0.41",
+          "weight": 0.11195462047474816
+        },
+        {
+          "feature": "mean fractal dimension <= -0.63",
+          "weight": 0.09734042313346626
+        }
+      ],
+      "local_exp": [
+        {
+          "feature_idx": 13,
+          "weight": 0.26088299467712384
+        },
+        {
+          "feature_idx": 10,
+          "weight": 0.23381148019855658
+        },
+        {
+          "feature_idx": 23,
+          "weight": 0.2064631021062706
+        },
+        {
+          "feature_idx": 20,
+          "weight": 0.19296040908828718
+        },
+        {
+          "feature_idx": 12,
+          "weight": 0.165232660020319
+        },
+        {
+          "feature_idx": 22,
+          "weight": 0.16319192270790225
+        },
+        {
+          "feature_idx": 24,
+          "weight": -0.1601445166217778
+        },
+        {
+          "feature_idx": 3,
+          "weight": 0.1296291161938827
+        },
+        {
+          "feature_idx": 0,
+          "weight": 0.11195462047474816
+        },
+        {
+          "feature_idx": 9,
+          "weight": 0.09734042313346626
+        }
+      ],
+      "intercept": 0.1307485396342189,
+      "html_file": "lime_test_093.html"
+    },
+    {
+      "test_index": 108,
+      "true_y": 1,
+      "pred_y": 1,
+      "proba": [
+        5.960464477539062e-07,
+        0.9999994039535522
+      ],
+      "explained_label": 1,
+      "num_features": 10,
+      "num_samples": 5000,
+      "weights": [
+        {
+          "feature": "worst texture <= -0.73",
+          "weight": 0.20118213529141252
+        },
+        {
+          "feature": "worst smoothness > 0.59",
+          "weight": -0.19452483578833268
+        },
+        {
+          "feature": "compactness error > 0.38",
+          "weight": 0.1599306727665219
+        },
+        {
+          "feature": "fractal dimension error > 0.24",
+          "weight": 0.1477531372055339
+        },
+        {
+          "feature": "worst radius <= -0.65",
+          "weight": 0.13781035977604789
+        },
+        {
+          "feature": "mean texture <= -0.73",
+          "weight": 0.13361753753639077
+        },
+        {
+          "feature": "-0.50 < area error <= -0.36",
+          "weight": 0.1243653406491307
+        },
+        {
+          "feature": "worst perimeter <= -0.67",
+          "weight": 0.10027007124880022
+        },
+        {
+          "feature": "mean symmetry > 0.51",
+          "weight": -0.09121882551630878
+        },
+        {
+          "feature": "worst area <= -0.63",
+          "weight": 0.09073921173486105
+        }
+      ],
+      "local_exp": [
+        {
+          "feature_idx": 21,
+          "weight": 0.20118213529141252
+        },
+        {
+          "feature_idx": 24,
+          "weight": -0.19452483578833268
+        },
+        {
+          "feature_idx": 15,
+          "weight": 0.1599306727665219
+        },
+        {
+          "feature_idx": 19,
+          "weight": 0.1477531372055339
+        },
+        {
+          "feature_idx": 20,
+          "weight": 0.13781035977604789
+        },
+        {
+          "feature_idx": 1,
+          "weight": 0.13361753753639077
+        },
+        {
+          "feature_idx": 13,
+          "weight": 0.1243653406491307
+        },
+        {
+          "feature_idx": 22,
+          "weight": 0.10027007124880022
+        },
+        {
+          "feature_idx": 8,
+          "weight": -0.09121882551630878
+        },
+        {
+          "feature_idx": 23,
+          "weight": 0.09073921173486105
+        }
+      ],
+      "intercept": 0.3083322852793467,
+      "html_file": "lime_test_108.html"
+    }
+  ]
+}

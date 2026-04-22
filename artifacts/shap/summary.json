@@ -1,0 +1,623 @@
+{
+  "seed": 42,
+  "nsamples": 5000,
+  "k_top": 10,
+  "background_size": 50,
+  "n_examples": 10,
+  "class_names": [
+    "malignant",
+    "benign"
+  ],
+  "results": [
+    {
+      "test_index": 7,
+      "true_y": 0,
+      "pred_y": 0,
+      "proba": [
+        1.0,
+        7.524972867045676e-10
+      ],
+      "topK_class1": [
+        {
+          "feature": "worst concave points",
+          "value": 1.6188263893127441,
+          "shap": -0.07143828108299297
+        },
+        {
+          "feature": "worst radius",
+          "value": 1.347748875617981,
+          "shap": -0.06879520059896124
+        },
+        {
+          "feature": "worst texture",
+          "value": 1.4103142023086548,
+          "shap": -0.06618753531600391
+        },
+        {
+          "feature": "worst area",
+          "value": 1.1672122478485107,
+          "shap": -0.06533667855859046
+        },
+        {
+          "feature": "mean concave points",
+          "value": 1.5313748121261597,
+          "shap": -0.0582544364466395
+        },
+        {
+          "feature": "worst perimeter",
+          "value": 1.4891024827957153,
+          "shap": -0.05748278874292823
+        },
+        {
+          "feature": "mean area",
+          "value": 1.5536590814590454,
+          "shap": -0.05435592447295477
+        },
+        {
+          "feature": "radius error",
+          "value": 0.8065383434295654,
+          "shap": -0.05376805507802085
+        },
+        {
+          "feature": "area error",
+          "value": 0.6335713267326355,
+          "shap": -0.05317719765960488
+        },
+        {
+          "feature": "perimeter error",
+          "value": 1.1497877836227417,
+          "shap": -0.04937192305153144
+        }
+      ]
+    },
+    {
+      "test_index": 15,
+      "true_y": 1,
+      "pred_y": 1,
+      "proba": [
+        0.020498812198638916,
+        0.9795011878013611
+      ],
+      "topK_class1": [
+        {
+          "feature": "radius error",
+          "value": -0.6043832302093506,
+          "shap": 0.06012777689918253
+        },
+        {
+          "feature": "mean symmetry",
+          "value": -1.1547530889511108,
+          "shap": 0.05061268381926947
+        },
+        {
+          "feature": "perimeter error",
+          "value": -0.6094287633895874,
+          "shap": 0.0423008509428485
+        },
+        {
+          "feature": "worst smoothness",
+          "value": -0.48321402072906494,
+          "shap": 0.04191417043475739
+        },
+        {
+          "feature": "worst symmetry",
+          "value": -0.8425399661064148,
+          "shap": 0.0398228495529618
+        },
+        {
+          "feature": "worst concave points",
+          "value": -0.20054709911346436,
+          "shap": 0.03582740282434922
+        },
+        {
+          "feature": "area error",
+          "value": -0.4018147885799408,
+          "shap": 0.03431419512526786
+        },
+        {
+          "feature": "worst concavity",
+          "value": -0.5122128129005432,
+          "shap": 0.03158818243701832
+        },
+        {
+          "feature": "worst area",
+          "value": -0.15216395258903503,
+          "shap": 0.025848392759860804
+        },
+        {
+          "feature": "mean concave points",
+          "value": 0.0005258063320070505,
+          "shap": 0.018976661245119597
+        }
+      ]
+    },
+    {
+      "test_index": 49,
+      "true_y": 0,
+      "pred_y": 0,
+      "proba": [
+        0.9999998211860657,
+        1.9361247893812106e-07
+      ],
+      "topK_class1": [
+        {
+          "feature": "worst concave points",
+          "value": 1.205866813659668,
+          "shap": -0.08505384604834766
+        },
+        {
+          "feature": "worst area",
+          "value": 0.8340540528297424,
+          "shap": -0.07291226518053885
+        },
+        {
+          "feature": "worst radius",
+          "value": 1.0060522556304932,
+          "shap": -0.07209384041944322
+        },
+        {
+          "feature": "worst perimeter",
+          "value": 0.9184669852256775,
+          "shap": -0.06279850072164697
+        },
+        {
+          "feature": "mean concave points",
+          "value": 0.975847065448761,
+          "shap": -0.058038650893034165
+        },
+        {
+          "feature": "mean radius",
+          "value": 1.1167926788330078,
+          "shap": -0.05798628314050535
+        },
+        {
+          "feature": "area error",
+          "value": 0.23021814227104187,
+          "shap": -0.05340257555198299
+        },
+        {
+          "feature": "radius error",
+          "value": 0.19597043097019196,
+          "shap": -0.048040459615280105
+        },
+        {
+          "feature": "mean area",
+          "value": 0.9796465039253235,
+          "shap": -0.04787081572504256
+        },
+        {
+          "feature": "perimeter error",
+          "value": 0.11107785999774933,
+          "shap": -0.039970590852424825
+        }
+      ]
+    },
+    {
+      "test_index": 53,
+      "true_y": 0,
+      "pred_y": 1,
+      "proba": [
+        0.0073187947273254395,
+        0.9926812052726746
+      ],
+      "topK_class1": [
+        {
+          "feature": "worst texture",
+          "value": -0.7142861485481262,
+          "shap": 0.06774884147462715
+        },
+        {
+          "feature": "mean texture",
+          "value": -0.7504523396492004,
+          "shap": 0.04763225591194619
+        },
+        {
+          "feature": "radius error",
+          "value": -0.43664878606796265,
+          "shap": 0.04377278642258508
+        },
+        {
+          "feature": "area error",
+          "value": -0.36769360303878784,
+          "shap": 0.041510148799066574
+        },
+        {
+          "feature": "perimeter error",
+          "value": -0.43188413977622986,
+          "shap": 0.04092126650745279
+        },
+        {
+          "feature": "worst area",
+          "value": -0.10192857682704926,
+          "shap": 0.03943410707769188
+        },
+        {
+          "feature": "worst symmetry",
+          "value": -0.5044821500778198,
+          "shap": 0.038234955579386616
+        },
+        {
+          "feature": "mean symmetry",
+          "value": -0.5311962366104126,
+          "shap": 0.026877390735000582
+        },
+        {
+          "feature": "mean area",
+          "value": -0.1768910437822342,
+          "shap": 0.025719421217222337
+        },
+        {
+          "feature": "mean concavity",
+          "value": -0.17779392004013062,
+          "shap": 0.022662009786969806
+        }
+      ]
+    },
+    {
+      "test_index": 55,
+      "true_y": 1,
+      "pred_y": 1,
+      "proba": [
+        2.7418136596679688e-06,
+        0.9999972581863403
+      ],
+      "topK_class1": [
+        {
+          "feature": "worst radius",
+          "value": -0.6717395186424255,
+          "shap": 0.052628165017664506
+        },
+        {
+          "feature": "worst concave points",
+          "value": -0.6120370626449585,
+          "shap": 0.04930551505118185
+        },
+        {
+          "feature": "worst area",
+          "value": -0.619283139705658,
+          "shap": 0.04784339909397257
+        },
+        {
+          "feature": "radius error",
+          "value": -0.8053753972053528,
+          "shap": 0.04658146375111285
+        },
+        {
+          "feature": "area error",
+          "value": -0.5466603636741638,
+          "shap": 0.042591357571797675
+        },
+        {
+          "feature": "worst perimeter",
+          "value": -0.5005132555961609,
+          "shap": 0.037756842192601094
+        },
+        {
+          "feature": "worst symmetry",
+          "value": -0.5551908016204834,
+          "shap": 0.03376445490731298
+        },
+        {
+          "feature": "mean concave points",
+          "value": -0.5414032936096191,
+          "shap": 0.03296792474084282
+        },
+        {
+          "feature": "mean radius",
+          "value": -0.4598265290260315,
+          "shap": 0.029853014609692616
+        },
+        {
+          "feature": "perimeter error",
+          "value": -0.31040623784065247,
+          "shap": 0.028537099489435724
+        }
+      ]
+    },
+    {
+      "test_index": 76,
+      "true_y": 0,
+      "pred_y": 0,
+      "proba": [
+        0.9979993104934692,
+        0.002000707434490323
+      ],
+      "topK_class1": [
+        {
+          "feature": "worst concave points",
+          "value": 0.8428739309310913,
+          "shap": -0.10163915407974326
+        },
+        {
+          "feature": "mean concave points",
+          "value": 0.989445686340332,
+          "shap": -0.07556350362603831
+        },
+        {
+          "feature": "mean texture",
+          "value": 0.8903138637542725,
+          "shap": -0.06631786319890795
+        },
+        {
+          "feature": "worst perimeter",
+          "value": 0.34783148765563965,
+          "shap": -0.06186675943868373
+        },
+        {
+          "feature": "mean concavity",
+          "value": 0.9188922047615051,
+          "shap": -0.05479239897520875
+        },
+        {
+          "feature": "worst texture",
+          "value": 0.3510931432247162,
+          "shap": -0.05283098017900519
+        },
+        {
+          "feature": "worst concavity",
+          "value": 0.7842721939086914,
+          "shap": -0.04908851043983122
+        },
+        {
+          "feature": "perimeter error",
+          "value": 0.3717389702796936,
+          "shap": -0.04690734267751915
+        },
+        {
+          "feature": "worst radius",
+          "value": -0.016991527751088142,
+          "shap": -0.046746017433822735
+        },
+        {
+          "feature": "mean radius",
+          "value": 0.23399876058101654,
+          "shap": -0.04041478427747491
+        }
+      ]
+    },
+    {
+      "test_index": 79,
+      "true_y": 1,
+      "pred_y": 1,
+      "proba": [
+        0.0003072023391723633,
+        0.9996927976608276
+      ],
+      "topK_class1": [
+        {
+          "feature": "worst texture",
+          "value": -0.763552188873291,
+          "shap": 0.051190968396369343
+        },
+        {
+          "feature": "radius error",
+          "value": -0.34952807426452637,
+          "shap": 0.046215508149139745
+        },
+        {
+          "feature": "worst concave points",
+          "value": -0.5237137079238892,
+          "shap": 0.04518304688001905
+        },
+        {
+          "feature": "mean concave points",
+          "value": -0.521760880947113,
+          "shap": 0.044499885973684775
+        },
+        {
+          "feature": "worst area",
+          "value": -0.16280408203601837,
+          "shap": 0.04141939810594796
+        },
+        {
+          "feature": "perimeter error",
+          "value": -0.6015597581863403,
+          "shap": 0.041040960485903236
+        },
+        {
+          "feature": "area error",
+          "value": -0.35481342673301697,
+          "shap": 0.040894718452214006
+        },
+        {
+          "feature": "worst concavity",
+          "value": -0.7276204824447632,
+          "shap": 0.03481466561067031
+        },
+        {
+          "feature": "worst symmetry",
+          "value": -0.6028262376785278,
+          "shap": 0.0288020447077873
+        },
+        {
+          "feature": "worst smoothness",
+          "value": -0.4743916392326355,
+          "shap": 0.027463579138366397
+        }
+      ]
+    },
+    {
+      "test_index": 81,
+      "true_y": 1,
+      "pred_y": 1,
+      "proba": [
+        2.09808349609375e-05,
+        0.9999790191650391
+      ],
+      "topK_class1": [
+        {
+          "feature": "worst concave points",
+          "value": -1.2244223356246948,
+          "shap": 0.06490224979480154
+        },
+        {
+          "feature": "worst area",
+          "value": -0.8163871765136719,
+          "shap": 0.049422381873675224
+        },
+        {
+          "feature": "worst radius",
+          "value": -0.9459152817726135,
+          "shap": 0.04280663094993897
+        },
+        {
+          "feature": "worst perimeter",
+          "value": -0.9508763551712036,
+          "shap": 0.0406345759018385
+        },
+        {
+          "feature": "area error",
+          "value": -0.3726648986339569,
+          "shap": 0.038491480170241614
+        },
+        {
+          "feature": "mean concave points",
+          "value": -0.9438208937644958,
+          "shap": 0.03831899831759786
+        },
+        {
+          "feature": "mean radius",
+          "value": -0.9985283017158508,
+          "shap": 0.033389721797270386
+        },
+        {
+          "feature": "worst smoothness",
+          "value": -0.4699804484844208,
+          "shap": 0.03164449638777195
+        },
+        {
+          "feature": "mean concavity",
+          "value": -0.7504454255104065,
+          "shap": 0.03120144023280048
+        },
+        {
+          "feature": "mean area",
+          "value": -0.8805743455886841,
+          "shap": 0.030999021978376947
+        }
+      ]
+    },
+    {
+      "test_index": 93,
+      "true_y": 0,
+      "pred_y": 0,
+      "proba": [
+        0.9999989867210388,
+        1.0117613555848948e-06
+      ],
+      "topK_class1": [
+        {
+          "feature": "worst area",
+          "value": 1.3712934255599976,
+          "shap": -0.0924939505146711
+        },
+        {
+          "feature": "worst radius",
+          "value": 1.4111775159835815,
+          "shap": -0.07660787044065903
+        },
+        {
+          "feature": "area error",
+          "value": 0.7960424423217773,
+          "shap": -0.06913996682434005
+        },
+        {
+          "feature": "mean area",
+          "value": 1.780653715133667,
+          "shap": -0.06685915714174313
+        },
+        {
+          "feature": "radius error",
+          "value": 0.6977277994155884,
+          "shap": -0.058261327541055154
+        },
+        {
+          "feature": "mean fractal dimension",
+          "value": -1.669501781463623,
+          "shap": -0.05474263194538864
+        },
+        {
+          "feature": "mean radius",
+          "value": 1.728825569152832,
+          "shap": -0.046481345349234406
+        },
+        {
+          "feature": "mean concave points",
+          "value": 0.6993423700332642,
+          "shap": -0.04596292427384785
+        },
+        {
+          "feature": "worst concave points",
+          "value": 0.39905259013175964,
+          "shap": -0.04503372458284818
+        },
+        {
+          "feature": "fractal dimension error",
+          "value": -0.7964391708374023,
+          "shap": -0.04258411138558249
+        }
+      ]
+    },
+    {
+      "test_index": 108,
+      "true_y": 1,
+      "pred_y": 1,
+      "proba": [
+        5.960464477539062e-07,
+        0.9999994039535522
+      ],
+      "topK_class1": [
+        {
+          "feature": "worst radius",
+          "value": -1.203722357749939,
+          "shap": 0.05310706551967594
+        },
+        {
+          "feature": "mean fractal dimension",
+          "value": 4.319854259490967,
+          "shap": 0.048998362064715265
+        },
+        {
+          "feature": "worst texture",
+          "value": -1.4040114879608154,
+          "shap": 0.04880487087307874
+        },
+        {
+          "feature": "worst area",
+          "value": -0.99535071849823,
+          "shap": 0.04362536400803865
+        },
+        {
+          "feature": "worst perimeter",
+          "value": -1.1021679639816284,
+          "shap": 0.04332263787819965
+        },
+        {
+          "feature": "fractal dimension error",
+          "value": 2.284416437149048,
+          "shap": 0.037551486279585856
+        },
+        {
+          "feature": "mean texture",
+          "value": -1.3961446285247803,
+          "shap": 0.03636192746723365
+        },
+        {
+          "feature": "mean radius",
+          "value": -1.3431845903396606,
+          "shap": 0.03154198708469413
+        },
+        {
+          "feature": "area error",
+          "value": -0.44248905777931213,
+          "shap": 0.0302109574039595
+        },
+        {
+          "feature": "mean perimeter",
+          "value": -1.221047282218933,
+          "shap": 0.028306723613645224
+        }
+      ]
+    }
+  ]
+}
