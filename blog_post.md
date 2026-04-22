@@ -1,7 +1,6 @@
 # LEAF: Evaluating Local Explanations of Black-Box Models
 
-> **Tutorial by Ulyana**  
-> *To reproduce all results, open our [Google Colab notebook](#).*
+> *To reproduce all results, open our [Google Colab notebook](https://colab.research.google.com/drive/13Uq612IHjV0J57PJ1CSVC5oBrzy8w2JJ?usp=sharing).*
 
 ---
 
