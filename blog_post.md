@@ -31,15 +31,15 @@
 
 ## Introduction
 
-Imagine a doctor using an AI system to help diagnose breast cancer. The system says: *"This tumour is malignant — confidence 94%."* The doctor needs to know *why*. Not to override the model — but to trust it, explain it to the patient, and catch cases where it might be wrong.
+Imagine a doctor using an AI system to help diagnose breast cancer. The system says: *"This tumour is malignant — confidence 94%."* At that point, the doctor still needs to understand *why*. Not to replace clinical judgement, but to trust the output, explain it to the patient, and catch possible mistakes.
 
-This is the core problem of **Explainable Artificial Intelligence (XAI)**: making the internal decisions of complex machine learning models understandable to humans.
+This is the main problem of **Explainable Artificial Intelligence (XAI)**: making decisions of complex ML models understandable for people.
 
 A popular family of XAI methods called **Local Linear Explainers (LLE)** solves this by fitting a simple, interpretable model around each individual prediction. The two most widely used are **LIME** and **SHAP**. Both are very popular — but which one actually produces *better* explanations? And how do we even measure "better"?
 
 In this tutorial, we implement and apply **LEAF** — the *Local Explanation evAluation Framework* introduced by Amparore et al. (2021) — to objectively compare LIME and SHAP across five principled quality dimensions. We apply it to a real medical classification problem: **breast cancer diagnosis**.
 
-By the end of this tutorial, you will understand:
+After reading this tutorial, you should understand:
 - How LIME and SHAP generate local linear explanations
 - Why we need a framework to evaluate explanations
 - How to implement each of the 5 LEAF metrics from scratch
@@ -260,13 +260,13 @@ Before diving into implementations, let's understand the landscape. Both LIME an
 | Local | Explains one prediction at a time, not the whole model |
 | Linear | The explanation is a simple weighted sum of features |
 
-The key difference is *how* they construct that linear model around each prediction.
+The main difference is *how* they build this local linear model around a prediction.
 
 ---
 
 ## LIME
 
-**LIME** (Local Interpretable Model-Agnostic Explanations) was introduced by Ribeiro et al. at KDD 2016. The central idea is beautifully simple:
+**LIME** (Local Interpretable Model-Agnostic Explanations) was introduced by Ribeiro et al. at KDD 2016. The core idea is simple:
 
 > *Even if a model is globally non-linear, it may behave approximately linearly in a small region around any given point.*
 
@@ -385,7 +385,7 @@ A **negative weight** means it pushes toward *malignant*.
 
 ### The Intuition
 
-Imagine the 30 features as "players" in a game. The "payout" is the model's prediction. The Shapley value answers: *"How much does each player contribute to the total payout, accounting for all possible orderings of player entry?"*
+Think about the 30 features as "players" in a game. The "payout" is the model prediction. The Shapley value asks: *"How much does each player contribute to the final payout if we consider all possible orders?"*
 
 This ensures a set of desirable properties:
 - **Efficiency**: The attributions sum to the prediction (minus the base rate)
@@ -404,7 +404,7 @@ where:
 - $S$ is a subset of features (a "coalition")
 - $f(S)$ is the model prediction when only features in $S$ are present (others are marginalised out)
 
-The key additive decomposition is:
+The main additive decomposition is:
 
 $$f(x) = \phi_0 + \sum_{i=1}^{p} \phi_i$$
 
@@ -516,9 +516,9 @@ LEAF evaluates a local linear explainer $g$ for a specific instance $x$ against 
 
 $$K = |\{i : w_i \neq 0\}|$$
 
-**Intuition:** Shorter explanations are easier to understand. Miller's Law suggests humans can process about $7 \pm 2$ items at once. We fix $K = 10$ in all experiments (LIME's default), so every explanation uses exactly 10 features.
+**Intuition:** Short explanations are easier to read. Miller's Law suggests people can keep around $7 \pm 2$ items in mind at once. We use $K = 10$ in all experiments (LIME default), so each explanation has 10 features.
 
-This is the only metric that is set by the user rather than computed — it is a *design choice*, not a measurement.
+This is the only metric set by us, not computed from data. So it is a *design choice*, not a measured score.
 
 **Code:**
 ```python
@@ -542,7 +542,7 @@ where:
 - $\hat{y}_g(z) = \mathbf{1}[g(z) \geq 0.5]$ — binarised surrogate predictions
 - $F_1$ is the standard harmonic mean of precision and recall
 
-**Intuition:** A fidelity of 1.0 means the surrogate perfectly replicates the black-box's decisions in the neighbourhood. A fidelity of 0.5 is no better than random.
+**Intuition:** Fidelity 1.0 means the surrogate copies black-box decisions perfectly in the local neighbourhood. Around 0.5 is basically weak agreement.
 
 **Code:**
 ```python
@@ -570,7 +570,7 @@ def local_fidelity(f_fn, g_fn, x, X_train, n_samples=1000, seed=0):
 
 $$\text{Concordance}(f(x), g(x)) = \max\!\bigl(0,\; 1 - |f(x) - g(x)|\bigr)$$
 
-**Intuition:** This is a hinge-loss style penalty. If $f(x) = 0.9$ (confident benign) but $g(x) = 0.1$ (confident malignant), then $|f(x) - g(x)| = 0.8$ and Concordance $= 0.2$. If they agree exactly, Concordance $= 1.0$.
+**Intuition:** This works like a hinge-style penalty. If $f(x) = 0.9$ (confident benign) but $g(x) = 0.1$ (confident malignant), then $|f(x) - g(x)| = 0.8$ and Concordance $= 0.2$. If they match exactly, Concordance $= 1.0$.
 
 Unlike Local Fidelity (which averages over the neighbourhood), Concordance measures agreement *at the specific instance* — the most important point.
 
@@ -595,7 +595,7 @@ $$J(A, B) = \frac{|A \cap B|}{|A \cup B|}$$
 
 We use $R = 30$ independent runs. For SHAP, we vary the number of coalition samples per run. For LIME, we vary the random seed of the perturbation generator.
 
-**Intuition:** A perfectly stable method always selects the same features: Reiteration = 1.0. An unstable method selects a different set each run: Reiteration → 0. Users who run an explanation tool twice and get different results lose trust in both the tool and the model.
+**Intuition:** A stable method picks the same features every time (Reiteration = 1.0). An unstable method picks different sets from run to run (Reiteration closer to 0). If users rerun an explainer and get different answers, trust drops quickly.
 
 **Code:**
 ```python
@@ -641,7 +641,7 @@ Moving in the direction of $g$'s weight vector $w$ by a step $h$:
 
 $$x' = x + h \cdot \hat{w}, \quad \text{where} \quad h = \frac{0.5 - g(x)}{\|w\|^2}$$
 
-This is the minimum-norm adjustment that makes $g(x') = 0.5$ (the class boundary of $g$).
+This is the smallest change that moves us to $g(x') = 0.5$ (the decision boundary of $g$).
 
 **Step 2 — Evaluate prescriptivity:**
 
@@ -649,7 +649,7 @@ $$\text{Prescriptivity} = \max\!\left(0,\; 1 - 2\,|f(x') - 0.5|\right)$$
 
 A score of 1.0 means: we moved to $x'$ following $g$'s suggestion, and $f(x') = 0.5$ (black-box is also at its boundary). A score of 0 means the counterfactual found by $g$ is completely off for $f$.
 
-**Intuition:** This measures **actionability**. A doctor might ask: *"What would need to change to flip the diagnosis?"* If $g$'s counterfactual $x'$ also makes $f$ uncertain, then $g$ correctly identifies the direction of change.
+**Intuition:** This metric checks **actionability**. A doctor may ask: *"What should change to flip the diagnosis?"* If counterfactual $x'$ from $g$ also makes $f$ uncertain, then $g$ points in a useful direction.
 
 **Code:**
 ```python
@@ -763,21 +763,21 @@ SHAP's Concordance is low because KernelSHAP uses a global background distributi
 
 ### Finding 2 — SHAP more stable
 
-SHAP's Reiteration score (0.765 ± 0.069) is not only higher than LIME's (0.601 ± 0.156) — it is also far less variable. This is because Shapley values have a **unique mathematical solution** for each instance (given a fixed background distribution). Re-running KernelSHAP with different coalition sample seeds produces nearly identical feature rankings.
+SHAP's Reiteration score (0.765 ± 0.069) is not only higher than LIME's (0.601 ± 0.156), but also much less variable. This happens because Shapley values have a **unique mathematical solution** for each instance (when background data is fixed). So rerunning KernelSHAP with different seeds gives almost the same feature ranking.
 
 LIME's instability comes from its random perturbation process: each run samples a different neighbourhood $Z$, and the resulting top-K features can shift significantly, especially for features with similar importances.
 
-**Practical implication:** If a user runs LIME twice and gets different feature rankings, they will not trust it. SHAP's consistency is a significant advantage for user trust.
+**Practical implication:** If someone runs LIME twice and sees different rankings, trust goes down. SHAP's consistency is a big practical advantage.
 
 ### Finding 3 — Prescriptivity reveals a structural limit of SHAP
 
-SHAP's Prescriptivity is essentially zero (0.000 ± 0.001). This is not a bug — it is a fundamental property of what SHAP values represent.
+SHAP's Prescriptivity is basically zero (0.000 ± 0.001). This is not a bug. It comes from what SHAP values are designed to represent.
 
 SHAP values measure *average marginal contributions across all coalitions*. They are not the coefficients of a local linear model with an explicit decision boundary. There is no natural direction $w$ in SHAP space that leads to $g(x') = 0.5$. When we try to use SHAP values as a linear model's weights and project toward its "boundary," the resulting $x'$ bears no meaningful relationship to the black-box's actual boundary.
 
 LIME, by contrast, *is* a local linear model. Walking along its gradient can (sometimes) reach the real boundary — hence non-zero Prescriptivity.
 
-**Practical implication:** If you need a **counterfactual explanation** ("what would need to change to flip the diagnosis?"), LIME is the appropriate tool. SHAP cannot provide actionable recourse.
+**Practical implication:** If you need a **counterfactual explanation** ("what should change to flip the diagnosis?"), LIME is the better tool here. SHAP is less suitable for this kind of actionable recourse.
 
 ### Finding 4 — Confident predictions are easier to explain
 
@@ -798,7 +798,7 @@ LEAF reveals that LIME and SHAP are **complementary**, not interchangeable:
 
 ## Conclusion
 
-We implemented the **LEAF framework** from scratch and used it to evaluate **LIME** and **SHAP** on a breast cancer classification task. The key contributions of our work:
+We implemented the **LEAF framework** from scratch and used it to evaluate **LIME** and **SHAP** on a breast cancer classification task. Main contributions of our work:
 
 1. **A complete pipeline** from data preprocessing through model training, explanation generation, and metric evaluation — all reproducible with a fixed random seed.
 
@@ -806,7 +806,7 @@ We implemented the **LEAF framework** from scratch and used it to evaluate **LIM
 
 3. **Actionability analysis** via the Prescriptivity metric reveals that SHAP explanations cannot guide counterfactual reasoning, while LIME can (to a limited extent).
 
-4. **A demonstration that no single explanation method is universally best** — the right choice depends on the evaluation criterion that matters most for the specific deployment context.
+4. **A clear demonstration that no single explanation method is always best** — the right choice depends on which evaluation criterion is most important in your use case.
 
 As AI systems increasingly face regulatory requirements for explainability (EU AI Act, GDPR Article 22), principled evaluation frameworks like LEAF will become essential for auditing and certifying AI explanations in high-stakes domains.
 
