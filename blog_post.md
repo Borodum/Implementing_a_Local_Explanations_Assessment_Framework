@@ -728,14 +728,6 @@ The full pipeline is run over **10 test instances** with fixed seed 42. Each ins
 
 ![Average LEAF metrics: LIME vs SHAP](artifacts/leaf/leaf_metrics_bar.png)
 
-| Metric | LIME | SHAP | Winner |
-|---|---|---|---|
-| **Local Fidelity** | 0.638 ± 0.426 | 0.576 ± 0.379 | LIME ↑ |
-| **Local Concordance** | 0.903 ± 0.113 | 0.543 ± 0.158 | **LIME ↑↑** |
-| **Reiteration Similarity** | 0.601 ± 0.156 | 0.765 ± 0.069 | **SHAP ↑↑** |
-| **Prescriptivity** | 0.124 ± 0.199 | 0.000 ± 0.001 | LIME ↑ |
-
-*Conciseness = 10 for both methods (by design).*
 
 ### Multi-Dimensional Profile
 
