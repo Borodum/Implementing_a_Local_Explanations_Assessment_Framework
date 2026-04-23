@@ -703,50 +703,6 @@ The full pipeline is run over **10 test instances** with fixed seed 42. Each ins
 
 ![Average LEAF metrics: LIME vs SHAP](artifacts/leaf/leaf_metrics_bar.png)
 
-
----
-
-## Key Findings
-
-### Finding 1 — LIME is more locally faithful and concordant
-
-LIME directly optimises for local agreement with the black-box (that is its objective function). It is therefore unsurprising that it achieves higher Fidelity (0.638 vs 0.576) and substantially higher Concordance (0.903 vs 0.543).
-
-SHAP's Concordance is low because KernelSHAP uses a global background distribution. The surrogate it implicitly defines aggregates over the full input space, which makes it less precise at predicting the black-box's output *at the specific instance* $x$.
-
-### Finding 2 — SHAP more stable
-
-SHAP's Reiteration score (0.765 ± 0.069) is not only higher than LIME's (0.601 ± 0.156), but also much less variable. This happens because Shapley values have a **unique mathematical solution** for each instance (when background data is fixed). So rerunning KernelSHAP with different seeds gives almost the same feature ranking.
-
-LIME's instability comes from its random perturbation process: each run samples a different neighbourhood $Z$, and the resulting top-K features can shift significantly, especially for features with similar importances.
-
-**Practical implication:** If someone runs LIME twice and sees different rankings, trust goes down. SHAP's consistency is a big practical advantage.
-
-### Finding 3 — Prescriptivity reveals a structural limit of SHAP
-
-SHAP's Prescriptivity is basically zero (0.000 ± 0.001). This is not a bug. It comes from what SHAP values are designed to represent.
-
-SHAP values measure *average marginal contributions across all coalitions*. They are not the coefficients of a local linear model with an explicit decision boundary. There is no natural direction $w$ in SHAP space that leads to $g(x') = 0.5$. When we try to use SHAP values as a linear model's weights and project toward its "boundary," the resulting $x'$ bears no meaningful relationship to the black-box's actual boundary.
-
-LIME, by contrast, *is* a local linear model. Walking along its gradient can (sometimes) reach the real boundary — hence non-zero Prescriptivity.
-
-**Practical implication:** If you need a **counterfactual explanation** ("what should change to flip the diagnosis?"), LIME is the better tool here. SHAP is less suitable for this kind of actionable recourse.
-
-### Finding 4 — Confident predictions are easier to explain
-
-Both methods score higher for instances where the model is very confident ($f(x) \approx 0$ or $f(x) \approx 1$). Near the decision boundary, the black-box is non-linear and unstable — no simple linear model can approximate it well. This suggests that for borderline cases (the most clinically important ones!), both LIME and SHAP need to be used with extra caution.
-
-### Finding 5 — Neither method dominates
-
-LEAF reveals that LIME and SHAP are **complementary**, not interchangeable:
-
-| Use case | Recommended method |
-|---|---|
-| Understanding *why this specific prediction* was made | **LIME** (concordance 0.90) |
-| Comparing feature importance *across many predictions* | **SHAP** (reiteration 0.77) |
-| Generating counterfactual *"what would change it"* advice | **LIME** (prescriptivity 0.12 vs 0.00) |
-| Trusting the explanation to be *consistent* across runs | **SHAP** (std 0.069 vs 0.156) |
-
 ---
 
 ## Conclusion
