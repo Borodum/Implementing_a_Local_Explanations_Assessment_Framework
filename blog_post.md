@@ -4,31 +4,6 @@
 
 ---
 
-## Table of Contents
-
-1. [Introduction](#introduction)
-2. [Application Domain: Medical Diagnosis](#application-domain)
-3. [Dataset: Wisconsin Breast Cancer](#dataset)
-4. [The Black-Box Model: Multi-Layer Perceptron](#the-black-box-model)
-5. [XAI Methods Overview](#xai-methods-overview)
-6. [LIME — Step by Step](#lime)
-7. [SHAP — Step by Step](#shap)
-8. [The Evaluation Problem](#the-evaluation-problem)
-9. [LEAF Framework](#leaf-framework)
-   - [Metric 1: Conciseness](#metric-1-conciseness)
-   - [Metric 2: Local Fidelity](#metric-2-local-fidelity)
-   - [Metric 3: Local Concordance](#metric-3-local-concordance)
-   - [Metric 4: Reiteration Similarity](#metric-4-reiteration-similarity)
-   - [Metric 5: Prescriptivity](#metric-5-prescriptivity)
-10. [Implementation: Putting It All Together](#implementation)
-11. [Results & Analysis](#results)
-12. [Key Findings](#key-findings)
-13. [Lessons Learned](#lessons-learned)
-14. [Conclusion](#conclusion)
-15. [References](#references)
-
----
-
 ## Introduction
 
 Imagine a doctor using an AI system to help diagnose breast cancer. The system says: *"This tumour is malignant — confidence 94%."* At that point, the doctor still needs to understand *why*. Not to replace clinical judgement, but to trust the output, explain it to the patient, and catch possible mistakes.
