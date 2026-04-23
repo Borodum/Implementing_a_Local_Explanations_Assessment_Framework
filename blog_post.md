@@ -704,12 +704,6 @@ The full pipeline is run over **10 test instances** with fixed seed 42. Each ins
 ![Average LEAF metrics: LIME vs SHAP](artifacts/leaf/leaf_metrics_bar.png)
 
 
-### Multi-Dimensional Profile
-
-![Radar chart of LEAF metrics: LIME vs SHAP](artifacts/report/fig8_radar.png)
-
-*The radar chart visualises each method's "explanation fingerprint" across the four computed metrics. LIME's polygon (blue) is larger on Concordance and Prescriptivity. SHAP's polygon (orange) extends further on Reiteration. Neither dominates the other — they are complementary.*
-
 ---
 
 ## Key Findings
