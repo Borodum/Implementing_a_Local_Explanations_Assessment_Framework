@@ -735,14 +735,6 @@ The full pipeline is run over **10 test instances** with fixed seed 42. Each ins
 
 *The radar chart visualises each method's "explanation fingerprint" across the four computed metrics. LIME's polygon (blue) is larger on Concordance and Prescriptivity. SHAP's polygon (orange) extends further on Reiteration. Neither dominates the other — they are complementary.*
 
-### Per-Instance Analysis
-
-![Scatter plot: Fidelity vs Concordance per instance](artifacts/report/fig9_scatter.png)
-
-*Each point represents one (instance, method) pair. Two patterns emerge:*
-1. *Some instances get high scores from both methods (top-right cluster) — these are "easy" instances far from the decision boundary where the model is confident.*
-2. *Instances near the decision boundary ($f(x) \approx 0.5$) score poorly on all metrics — the model itself is uncertain there, and linear approximations break down.*
-
 ---
 
 ## Key Findings
